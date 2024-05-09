@@ -26,6 +26,9 @@ def printBoard(boar):
 
 
 #start of setup
+print("Grid:")
+for i in range(0,7,3):
+    print(f"{i}  {i+1}  {i+2}")
 X = 3
 O = 5
 board = np.ndarray((3, 3))
@@ -37,7 +40,7 @@ d = np.fliplr(board).diagonal().sum()
 prio = []
 #end of setup
 
-
+print("Enter cell number or [yf] to let the ai go first")
 while 9 not in a and 15 not in a and 9 not in b and 15 not in b and d not in [9, 15] and c not in [9, 15]:
     n = input("Your move:  ")
     if n != "yf":
